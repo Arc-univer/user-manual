@@ -39,7 +39,13 @@
 
 ## 使用
 
-1. 把 `skills/` 目录复制到项目的 `.claude/skills/`（或用户级 `~/.claude/skills/`）。
+1. 用 [skills CLI](https://skills.sh) 安装（需 Node ≥ 22.20），无需手动复制文件：
+
+   ```bash
+   npx skills add Arc-univer/user-manual
+   ```
+
+   CLI 会自动发现仓库中的 skill，并交互式选择安装范围（项目级 / 用户级）与目标 agent（Claude Code、Codex 等）。
 2. 对话中说「给 ripgrep 写一份使用说明书」或贴一个 GitHub 地址即可触发。
 3. 可选：安装 [last30days](https://github.com/mvanhorn/last30days-skill) 获得近 30 天社区讨论层；未安装时 skill 会询问你「帮我安装 / 本次降级 WebSearch」。
 4. 产物默认写到当前目录 `manuals/<目标名>/<目标名>-manual.md`，可用环境变量 `USER_MANUAL_OUTPUT_DIR` 改默认落点（详见 SKILL.md「配置」节）。
