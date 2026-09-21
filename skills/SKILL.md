@@ -1,6 +1,6 @@
 ---
 name: user-manual
-description: 为开发者向工具（CLI、开源库、框架、MCP server）生成中文使用说明书。当用户说"写一份X的使用说明书"、"X的使用手册"、"使用指南"、"X怎么用"、"给X写个manual"、"user manual"、"usage guide"，或提供工具名/官网 URL/GitHub 地址并要求生成说明书时使用。固定七章骨架（简介与定位→安装与配置→快速上手→核心功能→常见问题与坑→进阶技巧→资源链接），调研后先出大纲经用户确认，成稿落盘 manuals/<目标名>/manual.md。
+description: 为开发者向工具（CLI、开源库、框架、MCP server）生成中文使用说明书。当用户说"写一份X的使用说明书"、"X的使用手册"、"使用指南"、"X怎么用"、"给X写个manual"、"user manual"、"usage guide"，或提供工具名/官网 URL/GitHub 地址并要求生成说明书时使用。固定七章骨架（简介与定位→安装与配置→快速上手→核心功能→常见问题与坑→进阶技巧→资源链接），调研后先出大纲经用户确认，成稿落盘 manuals/<目标名>/<目标名>-manual.md。
 ---
 
 # user-manual：开发者工具中文说明书生成器
@@ -108,7 +108,7 @@ last30days 是唯一「缺席会导致整层素材质量显著下降」的可选
 ```
 <产物根>/
 └── <目标名>/
-    ├── manual.md      # 说明书成稿
+    ├── <目标名>-manual.md  # 说明书成稿（项目名 + manual，提升辨识度）
     └── research/      # 调研素材（official-docs.md / github.md / community.md）
 ```
 

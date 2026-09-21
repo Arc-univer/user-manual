@@ -17,32 +17,32 @@
 
 ## 实测产物
 
-`manuals/` 下是三份端到端实测生成的说明书（附完整调研素材）：
+`manuals-example/` 下是三份端到端实测生成的说明书（附完整调研素材）：
 
 | 目标 | 类型 | 说明 |
 |---|---|---|
-| [ripgrep](manuals/ripgrep/manual.md) | 知名 CLI | 多平台安装 + flag 速查表 |
-| [vcrpy](manuals/vcrpy/manual.md) | 小众 Python 库 | 文档稀薄时 README/issues 顶上，近 30 天无社区讨论如实标注 |
-| [github-mcp-server](manuals/github-mcp-server/manual.md) | MCP server | 客户端配置 JSON 完整块 + tools 清单表 + 9 条经典坑 |
+| [ripgrep](manuals-example/ripgrep/ripgrep-manual.md) | 知名 CLI | 多平台安装 + flag 速查表 |
+| [vcrpy](manuals-example/vcrpy/vcrpy-manual.md) | 小众 Python 库 | 文档稀薄时 README/issues 顶上，近 30 天无社区讨论如实标注 |
+| [github-mcp-server](manuals-example/github-mcp-server/github-mcp-server-manual.md) | MCP server | 客户端配置 JSON 完整块 + tools 清单表 + 9 条经典坑 |
 
 ## 目录结构
 
 ```
-├── user-manual/       # skill 本体（SKILL.md + references/ + agents/ + test-prompts.json）
-├── manuals/           # 生成的说明书产物与调研素材
+├── skills/            # skill 本体（SKILL.md + references/ + agents/ + test-prompts.json）
+├── manuals-example/   # 三份实测生成的说明书产物与调研素材
 ├── docs/              # PRD、ADR、问题档案
 ├── CLAUDE.md          # 项目操作指引（Claude Code 用）
 └── CONTEXT.md         # 领域术语表
 ```
 
-> 开发时使用的 `.agents/skills/`、`.claude/skills/` 已 gitignore；仓库中的 `user-manual/` 是与生效版同步的发布副本。
+> 开发时使用的 `.agents/skills/`、`.claude/skills/` 已 gitignore；仓库中的 `skills/` 是与生效副本（`.agents/skills/user-manual/`）同步的发布副本。
 
 ## 使用
 
-1. 把 `user-manual/` 目录复制到项目的 `.claude/skills/`（或用户级 `~/.claude/skills/`）。
+1. 把 `skills/` 目录复制到项目的 `.claude/skills/`（或用户级 `~/.claude/skills/`）。
 2. 对话中说「给 ripgrep 写一份使用说明书」或贴一个 GitHub 地址即可触发。
 3. 可选：安装 [last30days](https://github.com/mvanhorn/last30days-skill) 获得近 30 天社区讨论层；未安装时 skill 会询问你「帮我安装 / 本次降级 WebSearch」。
-4. 产物默认写到当前目录 `manuals/<目标名>/`，可用环境变量 `USER_MANUAL_OUTPUT_DIR` 改默认落点（详见 SKILL.md「配置」节）。
+4. 产物默认写到当前目录 `manuals/<目标名>/<目标名>-manual.md`，可用环境变量 `USER_MANUAL_OUTPUT_DIR` 改默认落点（详见 SKILL.md「配置」节）。
 
 ## 文档
 
