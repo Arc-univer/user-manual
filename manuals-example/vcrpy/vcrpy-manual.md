@@ -3,6 +3,16 @@
 > vcrpy（VCR.py）是 Ruby VCR 的 Python 移植：把测试中的 HTTP 交互录制成「磁带」（cassette）文件，后续运行直接回放，不再产生真实网络流量。
 > 版本基准：**8.3.0**（以官方 CHANGELOG 为准，2026-09-20 抓取；文档站首页标注 8.0.0 系滞后）。
 
+## 目录
+
+- [[#1. 简介与定位]]
+- [[#2. 安装与配置]]
+- [[#3. 快速上手]]
+- [[#4. 核心功能]]
+- [[#5. 常见问题与坑]]
+- [[#6. 进阶技巧]]
+- [[#7. 资源链接]]
+
 ## 1. 简介与定位
 
 vcrpy 拦截受支持 HTTP 库发出的请求：首次运行时把请求/响应序列化到 YAML 文件（cassette），之后运行同一测试时直接回放磁带中的响应。三大收益：**离线可跑、测试完全确定、执行提速**（来源：[官方文档](https://vcrpy.readthedocs.io/en/latest/)、[README](https://raw.githubusercontent.com/kevin1024/vcrpy/master/README.rst)，2026-09-20）。

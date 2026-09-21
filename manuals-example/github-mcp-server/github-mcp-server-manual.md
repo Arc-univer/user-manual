@@ -3,6 +3,16 @@
 > GitHub 官方 MCP Server：让 AI 工具（Copilot、Claude、Cursor 等）通过 Model Context Protocol 直接读写 GitHub——仓库、issues、PR、Actions、安全告警，全部用自然语言操作。
 > 版本基准：**v1.12.2**（2026-09-16 发布，周级发版）；本文素材抓取于 2026-09-20。
 
+## 目录
+
+- [[#1. 简介与定位]]
+- [[#2. 安装与配置]]
+- [[#3. 快速上手]]
+- [[#4. 核心功能]]
+- [[#5. 常见问题与坑]]
+- [[#6. 进阶技巧]]
+- [[#7. 资源链接]]
+
 ## 1. 简介与定位
 
 GitHub MCP Server 把 GitHub 平台能力包装成 MCP 工具集，供任何 MCP 兼容宿主调用。官方定位五大场景：仓库管理、Issue/PR 自动化、CI/CD 与 Workflow 洞察、代码分析（安全告警/Dependabot）、团队协作（来源：[README](https://github.com/github/github-mcp-server)，2026-09-20）。
