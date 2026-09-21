@@ -1,0 +1,55 @@
+# ===== AI 工具配置 =====
+.agents
+.claude
+
+node_modules/
+sheets.db
+sheets.db-*
+sheets/*
+!sheets/.gitkeep
+
+# ===== 依赖 =====
+node_modules/
+
+# ===== 运行时数据 =====
+# SQLite 数据库文件
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+# 用户上传的曲谱文件（multer 上传目录）
+server/uploads/
+uploads/
+
+# ===== 环境变量与密钥 =====
+.env
+.env.*
+!.env.example
+
+# ===== 日志 =====
+*.log
+npm-debug.log*
+logs/
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 编辑器/IDE =====
+.idea/
+.vscode/
+*.swo
+*.swp
+
+# ===== 构建产物 =====
+dist/
+build/
+*.local
+
+# ===== 临时文件 =====
+tmp/
+temp/
+*.tmp

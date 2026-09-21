@@ -1,0 +1,3 @@
+interface:
+  display_name: "使用说明书生成"
+  short_description: "为开发者向工具自动生成中文使用说明书（经大纲检查点确认后落盘）"

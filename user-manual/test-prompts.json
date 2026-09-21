@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "scenario": "知名 CLI：工具名输入",
+    "prompt": "给 ripgrep 写一份使用说明书",
+    "expected": "完整走完五步流程：目标识别（锁定 BurntSushi/ripgrep）→ 3 个调研 subagent 并行（素材落盘 research/，raw 不进主窗口）→ 输出大纲并停下等确认 → 用户确认后按七章骨架成稿 → 落盘 manuals/ripgrep/manual.md。CLI 类型微调生效：安装章节覆盖多平台包管理器，核心功能按子命令/flag 分组带速查表。",
+    "verify": ["流程: 大纲检查点处停下等确认，未跳步", "真实: 命令/flag 均可在官方文档或 README 找到，无编造", "来源: 关键论断附链接+抓取日期", "产物: manuals/ripgrep/manual.md 与 research/ 三个素材文件齐全"]
+  },
+  {
+    "id": 2,
+    "scenario": "小众库：GitHub 地址输入，官方文档稀薄",
+    "prompt": "给这个库写个使用手册：https://github.com/kevin1024/vcrpy",
+    "expected": "目标识别从 repo 反查官网/文档站；官方文档稀薄时以 README 与 issues 顶上并在大纲标注缺口；开源库微调生效：快速上手为最小可运行代码示例，核心功能按 API 域分组。社区层聚焦「录制 cassette 的坑、敏感数据过滤」等真实讨论。",
+    "verify": ["降级: 无 llms.txt 时走 Jina/WebFetch 兜底链，未中止", "诚实: 素材不足的章节在大纲与成稿中如实标注", "类型: 安装命令为 pip，示例为可整段执行的 Python 代码", "边界: 未使用任何付费/需 key 的源"]
+  },
+  {
+    "id": 3,
+    "scenario": "MCP server：名称+类型明确",
+    "prompt": "帮我写一份 GitHub 官方 MCP server 的中文使用说明书",
+    "expected": "识别为 MCP server 类型并锁定 github/github-mcp-server；若「GitHub 官方 MCP server」有歧义则列候选反问一次。MCP 微调生效：安装与配置章节给出客户端配置 JSON 完整代码块，快速上手为验证连接+首次调用，核心功能列 tools 清单表格。",
+    "verify": ["类型: 含客户端配置 JSON 块与 tools 清单表", "澄清: 歧义时只反问一次且不等额外确认即继续后续步骤", "流程: 仍只有大纲一个检查点", "产物: 落盘 manuals/<目标名>/ 且目录结构正确"]
+  }
+]
